@@ -1,0 +1,11 @@
+@import '_reset.css';
+@import '_variables.css';
+@import '_typography.css';
+@import '_header.css';
+@import '_footer.css';
+@import '_home.css';
+@import '_tags.css';
+
+body {
+  background-color: var(--page-color);
+}

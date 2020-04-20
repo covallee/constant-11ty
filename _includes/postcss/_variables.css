@@ -1,0 +1,31 @@
+html {
+  --base-font-size: 20px;
+}
+
+body {
+  --page-color: #C1C1C1;
+  --bg-color: #C1C1C1;
+  --bg-content-color: #fff;
+  --bg-code: #fffbf3;
+  --body-color: #444;
+  --title-color: #111;
+  --link-color: #6b17e6;
+  --border-color:  rgba(0,0,0,.1);;
+  --space: 3.5rem;
+  --content-width: 860px;
+  --header-height: 80px;
+  --radius: 5px;
+  --primary-maroon: #861F41;
+  --primary-orange: #E87722;
+}
+
+body[data-theme="dark"] {
+ 	--page-color: #2E2E2E;
+ 	--bg-color: #2E2E2E;
+ 	--bg-content-color: #0f2d44;
+ 	--bg-code: rgba(0,0,0,.3);
+ 	--border-color:  rgba(255,255,255,.1);;
+ 	--body-color: #ced8de;
+ 	--title-color: #fff;
+ 	--link-color: #af9cef;
+}

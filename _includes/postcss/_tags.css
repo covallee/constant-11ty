@@ -1,0 +1,16 @@
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.625rem;
+  padding: 2px 4px;
+  margin-left: 0.8rem;
+  background-color: var(--primary-maroon);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a[href].tag,
+a[href].tag:visited {
+  color: #fff;
+}
