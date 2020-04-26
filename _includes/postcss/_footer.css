@@ -18,7 +18,9 @@
     margin: 0 0.35em;
   }
 
-  a {
-    color: currentColor;
-  }
+  a:link,
+  a:visited {
+  color: #fff;
+}
+
 }

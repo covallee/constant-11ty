@@ -13,7 +13,6 @@ body {
 h1, h2, h3, h4, h5 {
   transition: color .6s;
   color: var(--title-color);
-  margin: 2.75rem 0 1rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   line-height: 1.15;
@@ -31,3 +30,8 @@ h3 {font-size: 1.424em;}
 h4 {font-size: 1.266em;}
 
 h5 {font-size: 1.125em;}
+
+p {
+  transition: color .6s;
+  color: var(--title-color);
+}
