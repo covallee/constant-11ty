@@ -6,7 +6,13 @@
 @import 'footer';
 @import 'home';
 @import 'tags';
+@import 'about';
 
 body {
   background-color: var(--page-color);
+}
+
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
 }

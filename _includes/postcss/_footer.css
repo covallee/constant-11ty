@@ -3,12 +3,12 @@
   background-color: var(--primary-maroon);
   bottom: 0;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
-  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
   display: flex;
   font-size: 0.8em;
-  justify-content: end;
+  justify-content: space-between;
   left: 0;
-  padding: calc(var(--space) / 2);
+  padding: 50px calc(var(--space) / 2) 20px;
   position: absolute;
   right: 0;
   text-align: center;
@@ -20,7 +20,15 @@
 
   a:link,
   a:visited {
-  color: #fff;
-}
+    color: #fff;
+  }
+
+  & .footer__right ul {
+    display: flex;
+  }
+
+  & .footer__right li {
+    margin-left: 20px;
+  }
 
 }

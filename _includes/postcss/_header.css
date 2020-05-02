@@ -26,14 +26,8 @@
     text-decoration-color 200ms ease-out,
     color 200ms ease-out
   ; 
-  color: var(--title-color);
-  font-weight: 500;
-}
-
-  a:hover,
-  a:focus,
-  a:active {
-    /* text-decoration-color: var(--color); */
+    color: var(--title-color);
+    font-weight: 500;
   }
 
   a:link {
@@ -42,8 +36,9 @@
     text-decoration-skip-ink: none;
   }
 
-  a:hover {
-    /* color: var(--background); */
+  a:hover,
+  a:focus,
+  a:active {
     text-decoration-thickness: 1.125em;
     text-underline-offset: -0.875em;
   }

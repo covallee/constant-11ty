@@ -1,0 +1,6 @@
+.about__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0;
+  list-style-type: circle;
+}

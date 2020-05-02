@@ -1,0 +1,8 @@
+<ol reversed class="bookslist" style="counter-reset: start-from {{ (bookslistsCounter or bookslist.length) + 1 }}">
+{% for book in bookslist | reverse %}
+  <li class="booklist-item{% if book.url == url %} booklist-item-active{% endif %}">
+    <a href="{{ book.url | url }}" class="booklist-link">{% if book.data.title %}{{ book.data.title }}{% else %}<code>{{book.url}}</code>{% endif %}</a>
+    <time class="booklist-date" datetime="{{ book.date | htmlDateString }}">{{ book.date | readableDate }}</time>
+  </li>
+  {% endfor %}
+</ol>
