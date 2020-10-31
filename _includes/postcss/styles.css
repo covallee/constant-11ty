@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'mixins';
 @import 'utils';
 @import 'variables';
 @import 'typography';
@@ -10,9 +11,21 @@
 
 body {
   background-color: var(--page-color);
+  position: relative;
+  min-height: 100vh;
 }
 
-.wrapper {
+/* .wrapper {
   width: 700px;
   margin: 0 auto;
+} */
+
+main {
+  padding: 80px 16px 200px;
+  
+  @media (min-width: $mid) {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 0 200px;
+  }
 }

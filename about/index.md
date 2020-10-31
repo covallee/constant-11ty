@@ -4,7 +4,7 @@ title: About Me
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me
-  order: 3
+  order: 1
 ---
 
 I am Constant, I'm lead front-end dev @ Cirque du Soleil
@@ -15,6 +15,7 @@ Some of the technologies that I use:
   <li>React</li>
   <li>GraphQL</li>
   <li>Storybook</li>
+  <li>Sanity</li>
   <li>Gatsby</li>
   <li>Gulp</li>
   <li>Webpack</li>

@@ -39,4 +39,13 @@
     };
     window.__setPreferredTheme(attr);
   }
-})()
+})();
+
+(() => {
+  const btn = document.querySelector('.nav__burger');
+  const menu = document.querySelector('.header');
+  btn.addEventListener('click', function(event) {
+    btn.firstElementChild.classList.toggle('menu-opened');
+    menu.classList.toggle('menu-opened');
+  })
+})();

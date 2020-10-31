@@ -1,20 +1,74 @@
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   min-height: var(--header-height);
-  padding: 0 calc(var(--space) / 2);
+  background-color: var(--page-color);
   top: 0;
   z-index: 10;
+  position: fixed;
+  width: 100vw;
 
-  &__left,
-  &__right {
+  @media (min-width: $mid) {
+    flex-direction: row;
+  }
+
+  .header__left {
+    padding: 0 16px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $mid) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  & .header__right {
+    display: none;
+    padding-bottom: 16px;
+    
+    @media (min-width: $mid) {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+
+  &.menu-opened {
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &.menu-opened .header__right {
+    display: block;
+  }
+
+  & .header__item {
+    display: inline-block;
+  }
+
+  & .home {
+    font-size: 18px;
+
+    @media (min-width: $mid) {
+      font-size: 32px;
+    }
   }
 
   a {
-    padding: 20px;
+    display: inline-block;
+    padding: 10px;
+    
+    @media (min-width: $mid) {
+      padding: 20px;
+    }
   }
 
   a:link,
@@ -49,12 +103,75 @@
   border: 0;
   color: var(--body-color);
   cursor: pointer;
+  padding: 10px;
 
   &:hover {
     opacity: 0.8;
   }
   &:focus {
     outline: none;
+  }
+}
+
+.nav__burger {
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $mid) {
+    display: none;
+  }
+
+  .burger__container {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  #burger {
+    width: 20px;
+    height: 8px;
+    position: relative;
+    display: block;
+    margin: -4px auto 0;
+    top: 50%;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: relative;
+    background: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition-delay: 0s;
+    &.bar--top {
+      transform: translateY(0px) rotate(0deg);
+    }
+    &.bar--btm {
+      transform: translateY(6px) rotate(0deg);
+    }
+  }
+  
+  .burger__container.menu-opened {
+    transform: rotate(90deg);
+    & #burger {
+      & .bar {
+        transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition-delay: 0.2s;
+        &.bar--top {
+          transform: translateY(5px) rotate(45deg);
+        }
+        &.bar--btm {
+          transform: translateY(3px) rotate(-45deg);
+        }
+      }
+    }
   }
 }
 

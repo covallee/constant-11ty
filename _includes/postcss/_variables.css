@@ -1,3 +1,8 @@
+/* breakpoints for media queries */
+$narrow: 400px;
+$mid: 740px;
+$wide: 1200px;
+
 html {
   --base-font-size: 20px;
 }
@@ -13,7 +18,7 @@ body {
   --border-color:  rgba(0,0,0,.1);;
   --space: 3.5rem;
   --content-width: 860px;
-  --header-height: 80px;
+  --header-height: 60px;
   --radius: 5px;
   --primary-maroon: #861F41;
   --primary-orange: #E87722;

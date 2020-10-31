@@ -2,13 +2,17 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.625rem;
+  font-size: 0.5rem;
   padding: 2px 4px;
   margin-left: 0.8rem;
   background-color: var(--primary-maroon);
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: $mid) {
+    font-size: 0.625rem;
+  }
 }
 a[href].tag,
 a[href].tag:visited {

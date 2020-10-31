@@ -2,5 +2,5 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 20px 0;
-  list-style-type: circle;
+  list-style: circle inside;
 }
