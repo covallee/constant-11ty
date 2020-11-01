@@ -8,17 +8,13 @@
 @import 'home';
 @import 'tags';
 @import 'about';
+@import 'blog';
 
 body {
   background-color: var(--page-color);
   position: relative;
   min-height: 100vh;
 }
-
-/* .wrapper {
-  width: 700px;
-  margin: 0 auto;
-} */
 
 main {
   padding: 80px 16px 200px;

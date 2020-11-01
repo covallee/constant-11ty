@@ -1,0 +1,16 @@
+.blog {
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  padding: 2em 0;
+
+  & .blog__title{ 
+    margin-bottom: 2em;
+  }
+
+  & .blog__back {
+    margin-top: 2em;
+  }
+  & p {
+    text-indent: 30px;
+  }
+}

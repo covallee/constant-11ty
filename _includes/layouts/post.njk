@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<div class="wrapper">
-<h1>{{ title }}</h1>
+<div class="blog">
+<h1 class="blog__title">{{ title }}</h1>
 
 {{ content | safe }}
 
-<p><a href="{{ '/' | url }}">Home</a><p>
+<div class="blog__back"><a href="{{ '/' | url }}">Home</a></div>
 </div>
