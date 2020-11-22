@@ -10,7 +10,17 @@
   & .blog__back {
     margin-top: 2em;
   }
+
   & p {
     text-indent: 30px;
+  }
+
+  & .blog__title + p::first-letter {
+    font-size: 70px;
+    margin-top: 10px;
+    line-height: 60px;
+    padding: 8px 15px;
+    margin-right: 20px;
+    transform: translateY(10px);
   }
 }

@@ -14,7 +14,7 @@ body {
   background-color: var(--page-color);
   position: relative;
   min-height: 100vh;
-  transition: background-color .6s;
+  transition: background-color .2s;
 }
 
 main {

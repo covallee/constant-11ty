@@ -11,7 +11,7 @@
   <body>
     {% include "_header.njk" %}
 
-    <main{% if tamplateClass %} class="{{ templateClass }}"{% endif %}>
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
 
