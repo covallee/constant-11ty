@@ -10,7 +10,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: $mid) {
+  @media (min-width: 740px) {
     font-size: 0.625rem;
   }
 }

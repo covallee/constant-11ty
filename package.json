@@ -29,5 +29,11 @@
     "postcss-simple-vars": "5.0.2",
     "postcss-nested": "4.2.1",
     "precss": "4.0.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ]
 }

@@ -8,9 +8,9 @@
   z-index: 10;
   position: fixed;
   width: 100vw;
-  /* transition: background-color .2s; */
+  transition: background-color .2s;
 
-  @media (min-width: $mid) {
+  @media screen and (min-width: 740px) {
     flex-direction: row;
   }
 
@@ -26,7 +26,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $mid) {
+    @media (min-width: 740px) {
       flex-direction: row;
       align-items: center;
       padding: 0 16px;
@@ -37,7 +37,7 @@
     display: none;
     padding-bottom: 16px;
     
-    @media (min-width: $mid) {
+    @media (min-width: 740px) {
       display: flex;
       align-items: center;
       padding-bottom: 0;
@@ -59,7 +59,7 @@
   & .home {
     font-size: 18px;
 
-    @media (min-width: $mid) {
+    @media (min-width: 740px) {
       font-size: 32px;
     }
   }
@@ -68,7 +68,7 @@
     display: inline-block;
     padding: 10px;
     
-    @media (min-width: $mid) {
+    @media (min-width: 740px) {
       padding: 20px;
     }
   }
@@ -119,7 +119,7 @@
   border: none;
   background-color: transparent;
 
-  @media (min-width: $mid) {
+  @media (min-width: 740px) {
     display: none;
   }
 

@@ -18,11 +18,11 @@ module.exports = class {
 
   async render ({ rawCss, rawFilepath }) {
     return await postcss([
-      require('precss'),
+      // require('precss'),
       require('postcss-import'),
       require('postcss-mixins'),
-      require('postcss-color-mix'),
-      require('cssnano'),
+      require('postcss-nested'),
+      // require('cssnano'),
     ])
     .process(rawCss, { from: rawFilepath })
     .then(result => result.css);

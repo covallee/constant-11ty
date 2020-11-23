@@ -3,7 +3,7 @@
   function setTheme(newTheme) {
     window.__theme = newTheme
     preferredTheme = newTheme
-    document.body.setAttribute('data-theme', newTheme)
+    document.documentElement.setAttribute('class', newTheme)
     window.__onThemeChange(newTheme)
   }
 
@@ -31,7 +31,7 @@
   toggleBtn.addEventListener('click', toggleTheme);
   
   function toggleTheme() {
-    let attr = document.body.getAttribute('data-theme');
+    let attr = document.documentElement.getAttribute('class');
     if (attr === 'light') {
       attr = 'dark';
     } else {

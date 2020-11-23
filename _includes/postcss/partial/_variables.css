@@ -1,13 +1,13 @@
 /* breakpoints for media queries */
-$narrow: 400px;
+/* $narrow: 400px;
 $mid: 740px;
-$wide: 1200px;
+$wide: 1200px; */
 
 html {
   --base-font-size: 20px;
 }
 
-body {
+:root {
   --page-color: #C1C1C1;
   --bg-color: #C1C1C1;
   --bg-content-color: #fff;
@@ -24,7 +24,7 @@ body {
   --primary-orange: #E87722;
 }
 
-body[data-theme="dark"] {
+:root.dark {
  	--page-color: #2E2E2E;
  	--bg-color: #2E2E2E;
  	--bg-content-color: #0f2d44;
