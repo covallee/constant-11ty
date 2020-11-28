@@ -7,11 +7,11 @@
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url}}" type="application/atom+xml" title="{{ metadata.title }}">
-     {% set js %}
+     {% set js2 %}
       {# {% include "js/core.js" %} #}
-      {% include "js/test.js" %}
+      {% include "js/testHead.js" %}
     {% endset %}
-    <script>{{ js | safe }}</script>
+    <script>{{ js2 | safe }}</script>
     {# <style>
        {% include  "../../_site/css/styles.css" %}
     </style> #}
@@ -27,6 +27,10 @@
 
     <!-- Current page: {{ page.url | url }}-->
 
-
+    {% set js %}
+      {# {% include "js/core.js" %} #}
+      {% include "js/test.js" %}
+    {% endset %}
+    <script>{{ js | safe }}</script>
   </body>
 </html>
