@@ -177,12 +177,12 @@
   }
 }
 
-body[data-theme='dark'] {
+html.dark {
   & .feather-moon {
     display:none;
   }
 }
-body[data-theme='light'] {
+html.light {
   & .feather-sun {
     display:none;
   }

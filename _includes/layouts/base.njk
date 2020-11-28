@@ -7,6 +7,10 @@
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url}}" type="application/atom+xml" title="{{ metadata.title }}">
+    {% set jsInline %}
+      {% include "js/inline.js" %}
+    {% endset %}
+    <script>{{ jsInline | safe }}</script>
   </head>
   <body>
     {% include "_header.njk" %}
