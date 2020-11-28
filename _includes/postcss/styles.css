@@ -1,4 +1,4 @@
-/* @import 'partial/_reset'; */
+@import 'partial/_reset';
 @import 'partial/_mixins';
 @import 'partial/_utils';
 @import 'partial/_variables';

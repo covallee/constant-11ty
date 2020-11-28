@@ -36,7 +36,7 @@
   font-weight: 400;
 }
 
-body[data-theme="dark"] {
+html.dark {
   & .intro__image {
     clip-path: polygon(6px 9px, 99.42% -0.49%, 94.52% 91.43%, 3% 100%)
   }
