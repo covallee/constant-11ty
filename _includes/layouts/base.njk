@@ -7,9 +7,9 @@
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url}}" type="application/atom+xml" title="{{ metadata.title }}">
-    <style>
+    {# <style>
        {% include  "../../_site/css/styles.css" %}
-    </style>
+    </style> #}
   </head>
   <body>
     {% include "_header.njk" %}
