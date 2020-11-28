@@ -1,16 +1,16 @@
 (function() {
-  window.__onThemeChange = function() {}
+  // window.__onThemeChange = function() {}
   function setTheme(newTheme) {
-    window.__theme = newTheme
-    preferredTheme = newTheme
     document.documentElement.setAttribute('class', newTheme)
-    window.__onThemeChange(newTheme)
+    // window.__theme = newTheme
+    // preferredTheme = newTheme
+    // window.__onThemeChange(newTheme)
   }
 
-  var preferredTheme
-  try {
-    preferredTheme = localStorage.getItem('theme')
-  } catch (err) {}
+  var preferredTheme = localStorage.getItem('theme')
+  // try {
+  //   preferredTheme = localStorage.getItem('theme')
+  // } catch (err) {}
 
   window.__setPreferredTheme = function(newTheme) {
     setTheme(newTheme)
@@ -19,12 +19,12 @@
     } catch (err) {}
   }
 
-  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
-  darkQuery.addListener(function(e) {
-    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
-  })
+  // var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  // darkQuery.addListener(function(e) {
+  //   window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+  // })
 
-  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+  setTheme(preferredTheme )
 
   const toggleBtn = document.querySelector('.toggle-theme');
   
