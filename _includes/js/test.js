@@ -1,10 +1,10 @@
-const COLOR_SCHEME_BUTTON_CLASSNAME = 'toggle-theme'
+// const COLOR_SCHEME_BUTTON_CLASSNAME = 'toggle-theme'
 
-const COLOR_SCHEME_DARK_CLASSNAME = 'dark'
+// const COLOR_SCHEME_DARK_CLASSNAME = 'dark'
 
-const COLOR_SCHEME_KEY = 'colorScheme'
-const COLOR_SCHEME_DARK_VALUE = 'colorSchemeDark'
-const COLOR_SCHEME_LIGHT_VALUE = 'colorSchemeLight'
+// const COLOR_SCHEME_KEY = 'colorScheme'
+// const COLOR_SCHEME_DARK_VALUE = 'colorSchemeDark'
+// const COLOR_SCHEME_LIGHT_VALUE = 'colorSchemeLight'
 
 // Check stored color scheme value
 const isDarkSchemeApplied = document.documentElement.classList.contains(
