@@ -1,26 +1,52 @@
 .blog {
-  line-height: 1.5;
+  line-height: 1.7;
   text-rendering: optimizeLegibility;
   padding: 2em 0;
+  font-family: 'Castoro', serif;
+  letter-spacing: 0.04em;
 
   & .blog__title{ 
-    margin-bottom: 2em;
+    margin-bottom: 24px;
   }
 
   & .blog__back {
     margin-top: 2em;
   }
 
-  & p {
+  & pre {
+    color: var(--title-color);
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-left: 16px;
+  }
+
+  & h1, h2, h3, h4, h5 {
+    padding: 16px 0;
+  }
+
+  & p, & li {
+    padding: 16px 0;
+  }
+  
+  & > p:first-child {
     text-indent: 30px;
   }
 
+  & ol {
+    list-style: decimal inside;
+
+    & p {
+      display: inline;
+    }
+  }
+
   & .blog__title + p::first-letter {
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 10px;
-    line-height: 60px;
-    padding: 8px 15px;
-    margin-right: 20px;
-    transform: translateY(10px);
+    line-height: 20px;
+    padding: 8px 8px;
+    margin-right: 8px;
+    /* transform: translateY(10px); */
+    float: left;
   }
 }

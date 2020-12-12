@@ -3,7 +3,7 @@ body {
   position: relative;
   min-height: 100vh;
   transition-property: background-color;
-  transition-duration: .2s;
+  transition-duration: .5s;
 }
 
 main {

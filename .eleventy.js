@@ -40,6 +40,7 @@ module.exports = function(eleventyConfig) {
     linkinfy: true,
   }).use(markdownItAnchor, {
     permalink: true,
+    permalinkBefore: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
   });
