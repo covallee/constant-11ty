@@ -57,12 +57,18 @@ html.dark {
   padding-bottom: 16px;
 }
 
+.postlist-item {
+  display: flex;
+  align-items: center;
+}
+
 .postlist-link {
   text-decoration: none;
   color: var(--title-color);
   transition: color .6s;
   font-size: 1.1em;
   font-weight: 700;
+  padding: 8px 0;
   
   @media (min-width: 740px) {
     font-size: 1.3em;
@@ -78,6 +84,7 @@ html.dark {
   color: var(--title-color);
   transition: color .6s;
   font-size: 0.7em;
+  margin-left: 8px;
 
   @media (min-width: 740px) {
     font-size: 0.9em;

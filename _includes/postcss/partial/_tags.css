@@ -3,17 +3,23 @@
   justify-content: center;
   align-items: center;
   font-size: 0.5rem;
-  padding: 2px 4px;
-  margin-left: 0.8rem;
-  background-color: var(--primary-maroon);
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-
+  padding: 14px 10px;
+  
   @media (min-width: 740px) {
     font-size: 0.625rem;
   }
+  
+  & .tag-box {
+    padding: 2px 6px;
+    background-color: var(--primary-maroon);
+  }
 }
+
+
+
 a[href].tag,
 a[href].tag:visited {
   color: #fff;
