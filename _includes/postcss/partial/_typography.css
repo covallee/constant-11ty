@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Vidaloka&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=JetBrains+Mono&family=Poppins:wght@400;700&display=swap');
 
 html {
   font-size: var(--base-font-size);
@@ -17,7 +13,6 @@ body {
 h1, h2, h3, h4, h5 {
   transition: color .6s;
   color: var(--title-color);
-  /* font-family: 'Oswald', sans-serif; */
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.15;
