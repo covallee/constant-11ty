@@ -22,7 +22,7 @@ module.exports = class {
       require('postcss-import'),
       require('postcss-mixins'),
       require('postcss-nested'),
-      // require('cssnano'),
+      require('cssnano'),
     ])
     .process(rawCss, { from: rawFilepath })
     .then(result => result.css);

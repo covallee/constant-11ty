@@ -34,6 +34,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("img");
 
+  eleventyConfig.addPassthroughCopy("css/fonts");
+
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
