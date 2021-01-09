@@ -34,6 +34,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
 
   eleventyConfig.addPassthroughCopy("css/fonts");
 
