@@ -3,12 +3,12 @@ body {
   position: relative;
   min-height: 100vh;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 main {
   padding: 80px 16px 200px;
-  
+
   @media (min-width: 740px) {
     max-width: 800px;
     margin: 0 auto;

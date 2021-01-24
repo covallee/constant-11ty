@@ -15,22 +15,22 @@ html {
   --body-color: #444;
   --title-color: #111;
   --link-color: #6b17e6;
-  --border-color:  rgba(0,0,0,.1);;
+  --border-color: rgba(0, 0, 0, 0.1);
   --space: 3.5rem;
   --content-width: 860px;
   --header-height: 60px;
   --radius: 5px;
-  --primary-maroon: #861F41;
-  --primary-orange: #E87722;
+  --primary-maroon: #861f41;
+  --primary-orange: #e87722;
 }
 
 :root.dark {
- 	--page-color: #2E2E2E;
- 	--bg-color: #2E2E2E;
- 	--bg-content-color: #0f2d44;
- 	--bg-code: rgba(0,0,0,.3);
- 	--border-color:  rgba(255,255,255,.1);;
- 	--body-color: #ced8de;
- 	--title-color: #fff;
- 	--link-color: #af9cef;
+  --page-color: #2e2e2e;
+  --bg-color: #2e2e2e;
+  --bg-content-color: #0f2d44;
+  --bg-code: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --body-color: #ced8de;
+  --title-color: #fff;
+  --link-color: #af9cef;
 }
