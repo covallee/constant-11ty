@@ -10,13 +10,16 @@ eleventyNavigation:
 I am Constant, I'm lead front-end dev @ Cirque du Soleil
 
 Some of the technologies that I use:
+
 <ul class="about__list">
   <li>Vue.js</li>
+  <li>Nuxt</li>
   <li>React</li>
+  <li>Gatsby</li>
+  <li>11ty</li>
   <li>GraphQL</li>
   <li>Storybook</li>
   <li>Sanity</li>
-  <li>Gatsby</li>
   <li>Gulp</li>
   <li>Webpack</li>
   <li>PostCSS</li>
@@ -25,7 +28,8 @@ Some of the technologies that I use:
   <li>Digital Ocean</li>
 </ul>
 
-Some of the technologies that I'm learning: 
+Some of the technologies that I'm learning:
+
 <ul class="about__list">
 <li>Docker</li>
 <li>Jest</li>
