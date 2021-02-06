@@ -35,5 +35,8 @@
     "not IE 11",
     "not IE_Mob 11",
     "maintained node versions"
-  ]
+  ],
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.7.8"
+  }
 }
