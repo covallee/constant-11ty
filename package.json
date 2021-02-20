@@ -16,6 +16,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-navigation": "0.1.5",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-img": "^0.7.8",
     "@11ty/eleventy-plugin-syntaxhighlight": "3.0.1",
     "cssnano": "4.1.10",
     "luxon": "1.23.0",
@@ -36,7 +37,5 @@
     "not IE_Mob 11",
     "maintained node versions"
   ],
-  "dependencies": {
-    "@11ty/eleventy-img": "^0.7.8"
-  }
+  "dependencies": {}
 }
