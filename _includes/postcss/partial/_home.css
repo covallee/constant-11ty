@@ -29,6 +29,15 @@
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;
   }
+
+  & picture {
+    width: 250px;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .intro__pre {
