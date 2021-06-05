@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const Image = require('@11ty/eleventy-img');
 
@@ -28,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.setDataDeepMerge(true);
 

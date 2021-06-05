@@ -14,21 +14,25 @@
   }
 
   & pre {
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    display: block;
     background-color: var(--bg-code);
-    border-radius: 10px;
-    padding: 32px;
-    width: calc(100% + 64px);
-    margin-left: -32px;
+    padding: 2rem 1.5rem;
+    margin: 1rem -1rem;
+    overflow-x: auto;
+    
+    @media (min-width: 740px) {
+      padding: 32px;
+      margin: 1rem -2rem;
+      border-radius: 10px;
+      width: calc(100% + 64px);
+    }
   }
+
 
   & code {
     color: var(--title-color);
     font-size: 15px;
     font-family: 'JetBrains Mono', monospace;
-    /* margin-left: 16px; */
   }
 
   & h1,
