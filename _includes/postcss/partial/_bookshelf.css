@@ -1,0 +1,89 @@
+.bookshelf--container {
+    max-width: 900px;
+}
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    contain: style layout inline-size;
+    margin: 0 8px;
+}
+
+.card-container {
+    contain: style layout inline-size;
+    margin: 2rem 16px;
+    flex-basis: calc(50% - 32px);
+}
+
+.library-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--primary-maroon);
+    color: #fff;
+    position: relative;
+    font-size: 0.6rem;
+    gap: 16px;
+
+    &:hover,
+    &:focus {
+        & .card--poster-wrapper {
+            transform: translate(-5%, -5%);
+        }
+    }
+}
+
+.card--content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card--poster-wrapper {
+    flex-shrink: 0;
+    margin-top: -40px;
+    transition: all 0.3s cubic-bezier(.11,.72,.89,.61)
+}
+
+.card--poster {
+    width: 120px;
+    box-shadow: -2px 6px 19px 0px #2e2e2e;
+}
+
+.card--title {
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.card--author {
+    font-size: 0.8rem;
+}
+
+.card--rating {
+    font-size: 0.6rem;
+}
+
+@container (max-width: 600px) {
+    .card-container {
+        flex-basis: 100%;
+    }
+}
+
+@container (min-width: 300px) {
+    .library-card {
+        flex-direction: row;
+     }
+     
+    .card--title {
+        font-size: 1.4rem;
+    }
+
+    .card--poster-wrapper {
+        margin-top: -40px;
+        margin-left: -40px;
+    }  
+}

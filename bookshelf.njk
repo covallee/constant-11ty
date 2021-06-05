@@ -1,0 +1,24 @@
+---
+layout: layouts/home.njk
+permalink: /bookshelf/
+title: Bookshelf
+templateClass: bookshelf--container
+---
+
+<div class="bookshelf">
+{% for book in notion.json.results %}
+    <div class="card-container">
+        <div class="library-card">
+            <div class="card--poster-wrapper">
+                <img class="card--poster" src="{{book.properties.Cover.files[0].name}}" />
+            </div>
+            <div class="card--content">
+                <p class="card--title">{{book.properties.Name.title[0].text.content}} </p>
+                <p class="card--author">{{book.properties.Author.rich_text[0].text.content}} </p>
+                <p class="card--rating">Rating: {{book.properties.Rating.select.name}} </p>
+                <p>{{book.properties.Finish.date.start | truncate(4, true, '')}} </p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>

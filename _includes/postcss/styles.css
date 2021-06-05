@@ -11,3 +11,5 @@
 @import 'partial/_about';
 @import 'partial/_blog';
 @import 'partial/_archive';
+@import 'partial/_bookshelf';
+@import 'partial/_prism-theme';

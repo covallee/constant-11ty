@@ -10,7 +10,7 @@
   width: 100vw;
   transition: background-color 0.5s;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 780px) {
     position: relative;
     flex-direction: row;
   }
@@ -27,7 +27,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 740px) {
+    @media (min-width: 780px) {
       flex-direction: row;
       align-items: center;
       padding: 0 16px;
@@ -38,7 +38,7 @@
     display: none;
     padding-bottom: 16px;
 
-    @media (min-width: 740px) {
+    @media (min-width: 780px) {
       display: flex;
       align-items: center;
       padding-bottom: 0;
@@ -60,7 +60,7 @@
   & .home {
     font-size: 18px;
 
-    @media (min-width: 740px) {
+    @media (min-width: 780px) {
       font-size: 32px;
     }
   }
@@ -69,7 +69,7 @@
     display: inline-block;
     padding: 10px;
 
-    @media (min-width: 740px) {
+    @media (min-width: 780px) {
       padding: 20px;
     }
   }
@@ -116,7 +116,7 @@
   border: none;
   background-color: transparent;
 
-  @media (min-width: 740px) {
+  @media (min-width: 780px) {
     display: none;
   }
 
