@@ -1,7 +1,7 @@
 ---
 title: Notion API with 11ty
 description: How to use the Notion API in 11ty
-date: 2021-05-30
+date: 2021-07-04
 tags:
   - notion
 layout: layouts/post.njk
