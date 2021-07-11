@@ -1,6 +1,6 @@
 ---
 title: Flash of dark themed content (FODTC?)
-description: test
+metaDesc: How to avoid a flash of color on theme switch
 date: 2020-12-12
 tags:
   - 11ty

@@ -1,6 +1,6 @@
 ---
 title: theme.sanity is undefined
-description: How to fix "theme.sanity is undefined" error with Sanity UI
+metaDesc: How to fix "theme.sanity is undefined" error with Sanity UI
 date: 2021-01-30
 tags:
   - sanity

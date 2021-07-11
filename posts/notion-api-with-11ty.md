@@ -1,6 +1,6 @@
 ---
 title: Notion API with 11ty
-description: How to use the Notion API in 11ty
+metaDesc: How to use the Notion API in 11ty
 date: 2021-07-04
 tags:
   - notion

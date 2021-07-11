@@ -1,6 +1,6 @@
 ---
 title: Escape Nunjucks in Markdown
-description: how to add code blocks with nunjucks templating content in your markdown blog posts
+metaDesc: How to add code blocks with nunjucks templating content in your markdown blog posts
 date: 2020-12-13
 tags:
   - 11ty
