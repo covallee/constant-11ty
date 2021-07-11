@@ -1,10 +1,11 @@
 ---
 title: Notion API with 11ty
-description: How to use the Notion API in 11ty
+metaDesc: How to use the Notion API in 11ty
 date: 2021-07-04
 tags:
   - notion
 layout: layouts/post.njk
+socialImage: /img/socials/notion-11ty.jpg
 ---
 My latest weekend project was to play with the new container query in CSS, but since it's very experimental for the moment I didn't want to use it on the main part of the website. Notion released the first beta version of their much-awaited API a few weeks ago. So might as well combine two betas. I have a list of the books I've read in a Notion table. (Post on container query will come soon)
 

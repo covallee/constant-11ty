@@ -1,11 +1,12 @@
 ---
 title: Escape Nunjucks in Markdown
-description: how to add code blocks with nunjucks templating content in your markdown blog posts
+metaDesc: How to add code blocks with nunjucks templating content in your markdown blog posts
 date: 2020-12-13
 tags:
   - 11ty
   - Nunjucks
 layout: layouts/post.njk
+socialImage: /img/socials/escape-nunjucks.jpg
 ---
 
 Writing my last post I had a problem. How do you include code with Nunjucks template in your markdown when Nunjucks is your templating language?

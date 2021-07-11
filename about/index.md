@@ -5,6 +5,7 @@ templateClass: about
 eleventyNavigation:
   key: About Me
   order: 1
+socialImage: /img/socials/about.jpg
 ---
 
 I am Constant, I'm lead front-end dev @ Cirque du Soleil

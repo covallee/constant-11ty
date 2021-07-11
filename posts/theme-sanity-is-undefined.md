@@ -1,10 +1,11 @@
 ---
 title: theme.sanity is undefined
-description: How to fix "theme.sanity is undefined" error with Sanity UI
+metaDesc: How to fix "theme.sanity is undefined" error with Sanity UI
 date: 2021-01-30
 tags:
   - sanity
 layout: layouts/post.njk
+socialImage: /img/socials/theme-undefined.jpg
 ---
 
 I've been refactoring my music blog lately. I switched CMS, from Contentful to Sanity. The why could be another blog post.

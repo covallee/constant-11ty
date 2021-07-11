@@ -1,11 +1,12 @@
 ---
 title: Flash of dark themed content (FODTC?)
-description: test
+metaDesc: How to avoid a flash of color on theme switch
 date: 2020-12-12
 tags:
   - 11ty
   - css
 layout: layouts/post.njk
+socialImage: /img/socials/fodtc.jpg
 ---
 
 Setting up this website I ran into a tiny issue. Like all the cool kids I wanted to have two themes: dark and light. Using CSS custom properties and a class to identify the two theme it went pretty well. Then I saw a tweet from [@HenriHelvetica](https://twitter.com/HenriHelvetica/status/1207919960804265985) reminding us that it's nice to have a smooth transition between the two themes and not a full flash of colors. He is 100% right. So just add transition: background-color .5s, right? Well technically yes but that when the problems started for me. On Chrome and Safari, the website was still working fine and the transition was smooth but on Firefox (v83 at the time of the writing) every time you went to a new page you would get a flash of the light theme then the transition to the dark theme. So now you have a transition but the transition is triggered on every new page, which is not nice.
