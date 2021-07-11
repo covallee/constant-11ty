@@ -6,6 +6,7 @@ tags:
   - 11ty
   - Nunjucks
 layout: layouts/post.njk
+socialImage: /img/socials/escape-nunjucks.jpg
 ---
 
 Writing my last post I had a problem. How do you include code with Nunjucks template in your markdown when Nunjucks is your templating language?

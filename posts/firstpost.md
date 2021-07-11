@@ -5,6 +5,7 @@ date: 2020-11-01
 tags: 
   - tag
 layout: layouts/post.njk
+socialImage: /img/socials/first.jpg
 ---
 
 Months ago I started to try to set up a blog with Gatsby and Sanity. I wanted to do the full install on my own, not use one of the templates available in the repos of Sanity or Gatsby. I also wanted to do the full hosting on a custom droplet, you know to be "full-stack". But I never finished it and so also never blogged.
