@@ -22,6 +22,15 @@ html {
   --radius: 5px;
   --primary-maroon: #861f41;
   --primary-orange: #e87722;
+  --token-comment: #696969;
+  --token-punctuation: #545454;
+  --token-prop: #007faa;
+  --token-number: #008000;
+  --token-selector: #aa5d00;
+  --token-operator: #008000;
+  --token-atrule: #aa5d00;
+  --token-keyword: #d91e18;
+  --token-regex: #d91e18;
 }
 
 :root.dark {
@@ -33,4 +42,13 @@ html {
   --body-color: #ced8de;
   --title-color: #fff;
   --link-color: #af9cef;
+  --token-comment: #d4d0ab;
+  --token-punctuation: #fefefe;
+  --token-prop: #ffa07a;
+  --token-number: #00e0e0;
+  --token-selector: #abe338;
+  --token-operator: #00e0e0;
+  --token-atrule: #ffd700;
+  --token-keyword: #00e0e0;
+  --token-regex: #ffd700;
 }
