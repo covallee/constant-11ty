@@ -8,7 +8,9 @@ eleventyNavigation:
 socialImage: /img/socials/about.jpg
 ---
 
-I am Constant, I'm lead front-end dev @ Cirque du Soleil
+# About me
+
+I am Constant, I'm a lead front-end engineer at Cirque du Soleil Entertainment Group.
 
 Some of the technologies that I use:
 
@@ -32,7 +34,7 @@ Some of the technologies that I use:
 Some of the technologies that I'm learning:
 
 <ul class="about__list">
-<li>Docker</li>
-<li>Jest</li>
-<li>TypeScript</li>
+  <li>Docker</li>
+  <li>Jest</li>
+  <li>TypeScript</li>
 </ul>

@@ -1,10 +1,10 @@
 .about {
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .about__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 20px 0;
+  margin: 2rem 3rem;
   list-style: circle inside;
 }
