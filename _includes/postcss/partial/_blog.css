@@ -31,7 +31,10 @@
 
   & code {
     color: var(--title-color);
-    font-size: 15px;
+    background-color: var(--bg-code);
+    padding: 0.1em 0.2em;
+    border-radius: 4px;
+    font-size: 1rem;
     font-family: 'JetBrains Mono', monospace;
   }
 
@@ -40,12 +43,12 @@
   h3,
   h4,
   h5 {
-    padding: 16px 0;
+    padding: 1rem 0;
   }
 
   & p,
   & li {
-    padding: 16px 0;
+    padding: 1rem 0;
   }
 
   & > p:first-child {
