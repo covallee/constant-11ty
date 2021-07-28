@@ -48,6 +48,8 @@
 
   & .footer__right ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   & .footer__right li {
