@@ -1,5 +1,9 @@
 .tmpl-post {
   overflow: hidden;
+
+  @media (min-width: 740px) {
+    overflow: visible;
+  }
 }
 
 .blog {
