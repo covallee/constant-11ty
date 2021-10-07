@@ -54,6 +54,7 @@
 
   & .footer__right li {
     margin-left: 20px;
+    padding: 8px 0;
   }
   & .footer__right li:first-child {
     margin-left: 0;
