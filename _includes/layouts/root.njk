@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {# <title>{{ renderData.title or title or metadata.title }}</title> #}
+    {# <meta name="Description" content="{{ renderData.description or description or metadata.description }}"> #}
+
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url}}" type="application/atom+xml" title="{{ metadata.title }}">
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    {# <meta name="og:image" content="https://www.constantvallee.dev/img/social.jpg"> #}
+
+    {% include "_meta.njk" %}
+
+    <style>{{ page.url | webcGetCss | safe }}</style>
+    {% set jsInline %}
+      {% include "js/inline.js" %}
+    {% endset %}
+    <script>{{ jsInline | safe }}</script>
+
+    <script src="https://cdn.usefathom.com/script.js" data-site="ZTOWCDCW" defer></script>
+
+  </head>
+  <body>
+    {# {% include "_header.njk" %} #}
+
+    {{ content | safe }}
+    {# <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    </main> #}
+
+    {# {% include "_footer.njk" %} #}
+ 
+    {% set js %}
+      {% include "js/core.js" %}
+    {% endset %}
+    <script>{{ js | safe }}</script>
+  </body>
+</html>

@@ -77,6 +77,7 @@
   a:link,
   a:visited {
     text-decoration-color: var(--primary-orange);
+    text-decoration-color: var(--p5-primary-orange);
     transition: text-decoration-thickness 200ms ease-out, text-underline-offset 200ms ease-out,
       text-decoration-color 200ms ease-out, color 200ms ease-out;
     color: var(--title-color);

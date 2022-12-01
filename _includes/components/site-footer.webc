@@ -1,0 +1,99 @@
+<footer class="footer">
+  <div class="footer__left">
+    <span class="footer__copyright">© 2022 Constant Vallee</span>
+    •
+    <span class="footer__links">
+      Powered by
+      <a href="https://www.11ty.dev">11ty & WebC</a>
+    </span>
+  </div>
+  <div class="footer__right">
+    <ul>
+      <li>
+        <a href="/feed.xml">RSS</a>
+      </li>
+      <li>
+        <a href="/bookshelf">Bookshelf</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ShareandDance">Twitter</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/constantvallee/">Linkedin</a>
+      </li>
+      <li>
+        <a href="https://github.com/covallee">Github</a>
+      </li>
+      <li>
+        <a href="https://codepen.io/cvallee">Codepen</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style webc:scoped>
+  .footer {
+    background-color: var(--primary-maroon);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 60px calc(var(--space) / 2) 20px;
+  }
+
+  .footer > span {
+    margin: 0 0.35em;
+  }
+  a:link,
+  a:visited {
+    color: #fff;
+  }
+
+  .footer__right {
+    margin-bottom: 16px;
+  }
+
+  .footer__left {
+    font-size: 12px;
+  }
+
+  .footer__right ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__right li {
+    margin-left: 20px;
+    padding: 8px 0;
+  }
+
+  .footer__right li:first-child {
+    margin-left: 0;
+  }
+
+  @media (min-width: 740px) {
+    .footer {
+      clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+      padding: 50px calc(var(--space) / 2) 20px;
+      flex-direction: row;
+    }
+
+    .footer__right {
+      margin-bottom: 0;
+    }
+
+    .footer__left {
+      font-size: 16px;
+    }
+  }
+</style>

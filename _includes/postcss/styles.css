@@ -4,8 +4,6 @@
 @import 'partial/_variables';
 @import 'partial/_global.css';
 @import 'partial/_typography';
-@import 'partial/_header';
-@import 'partial/_footer';
 @import 'partial/_home';
 @import 'partial/_tags';
 @import 'partial/_about';
