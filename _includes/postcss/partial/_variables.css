@@ -22,6 +22,7 @@ html {
   --radius: 5px;
   --primary-maroon: #861f41;
   --primary-orange: #e87722;
+  --p5-primary-orange: color(display-p3 0.82 0.32 0.094);
   --token-comment: #696969;
   --token-punctuation: #545454;
   --token-prop: #007faa;

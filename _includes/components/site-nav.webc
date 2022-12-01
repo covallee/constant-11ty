@@ -1,0 +1,222 @@
+<header class="header">
+  <div class="header__left">
+    <h1 class="home">
+      <script webc:type="render" webc:is="template">
+        function() {
+            return `<a href="/">${this.data.metadata.title}</a>`;
+          }
+      </script>
+    </h1>
+    <button class="nav__burger" aria-label="open menu">
+      <div class="burger__container">
+        <div id="burger">
+          <div class="bar bar--top"></div>
+          <div class="bar bar--btm"></div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="header__right">
+    <ul class="header__list">
+      <script webc:type="render" webc:is="template">
+          function () {
+            let collection = this.data.collections.all;
+            let navigation = collection.filter(page => page.data.eleventyNavigation)
+            return navigation.map((page) => {
+                return `<li class="header__item">
+          <a href="${page.url}">${page.data.title}</a>
+        </li>`})
+        .join("");
+          }
+      </script>
+      <li class="header__item"><a href="https://shareanddance.com">Music Blog</a></li>
+      <li class="header__item">
+        <button role="button" aria-label="Toggle dark/light" class="toggle-theme">
+          <feather-sun></feather-sun>
+          <feather-moon></feather-moon>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<style webc:scoped>
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: var(--header-height);
+    background-color: var(--page-color);
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.5s;
+  }
+
+  .header__left {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__right {
+    display: none;
+    padding-bottom: 16px;
+  }
+
+  .header.menu-opened {
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .menu-opened .header__right {
+    display: block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px;
+
+    @media (min-width: 780px) {
+      padding: 20px;
+    }
+  }
+  a:link,
+  a:visited {
+    text-decoration-color: var(--primary-orange);
+    /* text-decoration-color: var(--p5-primary-orange); */
+    transition: text-decoration-thickness 200ms ease-out, text-underline-offset 200ms ease-out,
+      text-decoration-color 200ms ease-out, color 200ms ease-out;
+    color: var(--title-color);
+    font-weight: 500;
+  }
+
+  a:link {
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: 0.125em;
+    text-decoration-skip-ink: none;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration-thickness: 1.125em;
+    text-underline-offset: -0.875em;
+  }
+
+  .toggle-theme {
+    background-color: transparent;
+    border: 0;
+    color: var(--body-color);
+    cursor: pointer;
+    padding: 10px;
+  }
+  .toggle-theme:hover {
+    opacity: 0.8;
+  }
+  .toggle-theme:focus {
+    outline: none;
+  }
+
+  .nav__burger {
+    border: none;
+    background-color: transparent;
+  }
+
+  .burger__container {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #burger {
+    width: 20px;
+    height: 8px;
+    position: relative;
+    display: block;
+    margin: -4px auto 0;
+    top: 50%;
+  }
+
+  .bar {
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: relative;
+    background: var(--title-color);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition-delay: 0s;
+  }
+  .bar.bar--top {
+    transform: translateY(0px) rotate(0deg);
+  }
+  .bar.bar--btm {
+    transform: translateY(6px) rotate(0deg);
+  }
+
+  .burger__container.menu-opened {
+    transform: rotate(90deg);
+  }
+
+  .burger__container.menu-opened #burger .bar {
+    transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition-delay: 0.2s;
+  }
+  .burger__container.menu-opened #burger .bar.bar--top {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .burger__container.menu-opened #burger .bar.bar--btm {
+    transform: translateY(3px) rotate(-45deg);
+  }
+
+  @media screen and (min-width: 780px) {
+    .header {
+      position: relative;
+      flex-direction: row;
+    }
+
+    .header__list {
+      flex-direction: row;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .header__right {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    a {
+      padding: 20px;
+    }
+
+    .nav__burger {
+      display: none;
+    }
+  }
+</style>
+
+<style>
+  html.dark .feather-moon {
+    display: none;
+  }
+
+  html.light .feather-sun {
+    display: none;
+  }
+</style>
