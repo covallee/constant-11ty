@@ -41,8 +41,7 @@ The built-in Render plugin of Eleventy is here to help up, but there are a few t
 Previously I had a `base.njk` layout with the head and the body of my pages. There was also 2 include to import a `_footer.njk` and `_header.njk`. So I replaced the njk include of the footer by:
 
 ```javascript
-{% raw %}
-{% renderTemplate "webc" %}
+{% raw %}{% renderTemplate "webc" %}
 <site-footer></site-footer>
 {% endrenderTemplate %}
 {% endraw %}
@@ -52,9 +51,7 @@ The footer was rendering, but the CSS was missing.
 Well you also need to include:
 
 ```
-{% raw %}
-<style>{{ page.url | webcGetCss | safe }}</style>
-{% endraw %}
+{% raw %}<style>{{ page.url | webcGetCss | safe }}</style>{% endraw %}
 ```
 
 But at first, the content of the style tag was empty :(
@@ -100,11 +97,9 @@ It was passing the string "metadata" instead of the actual object.
 However, if I passed metadata directly to the renderTemplate, then `this` contained the data from metadata in the script tag.
 
 ```
-{% raw %}
-{% renderTemplate "webc", metadata %}
+{% raw %}{% renderTemplate "webc", metadata %}
     <site-nav></site-nav>
-{% endrenderTemplate %}
-{% endraw %}
+{% endrenderTemplate %}{% endraw %}
 ```
 
 Now my issue was that I needed the data from 2 sources. The `_data/metadata.json` and the `collections` 🥺.
@@ -112,21 +107,17 @@ Now my issue was that I needed the data from 2 sources. The `_data/metadata.json
 **Don't** try the following code, it does not work. You can pass only one item.
 
 ```
-{% raw %}
-{% renderTemplate "webc", metadata, collections %}
+{% raw %}{% renderTemplate "webc", metadata, collections %}
     <site-nav></site-nav>
-{% endrenderTemplate %}
-{% endraw %}
+{% endrenderTemplate %}{% endraw %}
 ```
 
 My solution was to put the two objects into an Object.
 
 ```
-{% raw %}
-{% renderTemplate "webc", data={collections: collections,metadata: metadata} %}
+{% raw %}{% renderTemplate "webc", data={collections: collections,metadata: metadata} %}
     <site-nav></site-nav>
-{% endrenderTemplate %}
-{% endraw %}
+{% endrenderTemplate %}{% endraw %}
 ```
 
 Now `this.data` had all the info I needed to build the nav.
@@ -134,11 +125,9 @@ Now `this.data` had all the info I needed to build the nav.
 In the njk version of the nav, to get the page to include in the navigation I was able to loop on `collections.all` and filter like this:
 
 ```
-{% raw %}
-{%- for entry in collections.all | eleventyNavigation %}
+{% raw %}{%- for entry in collections.all | eleventyNavigation %}
 <li>...</li>
-{%- endfor %}
-{% endraw %}
+{%- endfor %}{% endraw %}
 ```
 
 In the WebC version of the component I was getting all the collection's items (pages, tags etc...). Because the data used by eleventyNavigation is in the Front Matter, I can access that information in the data object of each page. First I get the collections passed in the renderTemplate, then filter the collections.all to only the ones with a `data.eleventyNavigation`. Finally I use a .map on the leftovers to generate the necessary HTML code. (I probably don't need the eleventyNavigation plugin as long as I keep the variables in the Front Matter of the files 🤔)
