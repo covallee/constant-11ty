@@ -6,6 +6,7 @@ tags:
   - 11ty
   - webc
 layout: layouts/post.njk
+socialImage: /img/socials/exploring-webc.jpg
 ---
 
 A few weeks ago, I was at JamstackConf 22 and WebC was mentioned many times during the talks. It got me curious.
