@@ -1,6 +1,6 @@
 ---
 title: Exploring WebC
-metaDesc:
+metaDesc: How to setup and create your first WebC component in a Nunjucks 11ty
 date: 2022-11-30
 tags:
   - 11ty
@@ -33,9 +33,9 @@ The content of that component was a basic footer HTML structure. I used the `web
 
 This was pretty straightforward so far.
 
-## How to include a WebC component in a Nunjuck layout?
+## How to include a WebC component in a Nunjucks layout?
 
-The first hurdle was how to include that new component into a Nunjuck layout. I don't want to fully rewrite my website in WebC right now, so I can't just include `<site-footer></site-footer>` in a .webc layout.
+The first hurdle was how to include that new component into a Nunjucks layout. I don't want to fully rewrite my website in WebC right now, so I can't just include `<site-footer></site-footer>` in a .webc layout.
 
 The built-in Render plugin of Eleventy is here to help up, but there are a few tricks you need to know to have it fully working.
 
@@ -64,7 +64,7 @@ I have to admit I don't fully understand why we need to do that chaining of layo
 
 The second issue I ran into, got me stuck for a bit.
 
-## How to pass data from a Nunjuck layout to WebC components?
+## How to pass data from a Nunjucks layout to WebC components?
 
 The next logical component was the nav bar. I created a `site-nav.webc`, pasted the code from my previous `_nav.njk` and then realized that I had no idea how to deal with the logic part. At build time the Nav was pulling some site information from a `_data/metadata.json` file and some collections.all info. More precisely the collection with the eleventyNavigation tag. [Navigation Plugin info](https://www.11ty.dev/docs/plugins/navigation/)
 
