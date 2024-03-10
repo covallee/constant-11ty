@@ -10,7 +10,7 @@ socialImage: /img/socials/about.jpg
 
 # About me
 
-I am Constant, I'm a lead front-end engineer at Cirque du Soleil Entertainment Group.
+I am Constant, I'm a team lead engineer at Cirque du Soleil Entertainment Group.
 
 Some of the technologies that I use:
 
