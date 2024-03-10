@@ -133,17 +133,17 @@ In the njk version of the nav, to get the page to include in the navigation I wa
 
 In the WebC version of the component I was getting all the collection's items (pages, tags etc...). Because the data used by eleventyNavigation is in the Front Matter, I can access that information in the data object of each page. First I get the collections passed in the renderTemplate, then filter the collections.all to only the ones with a `data.eleventyNavigation`. Finally I use a .map on the leftovers to generate the necessary HTML code. (I probably don't need the eleventyNavigation plugin as long as I keep the variables in the Front Matter of the files 🤔)
 
+> In 2024, I updated the packages and some of the code in this article needed to be tweaked. First webc:js was available, and to access the data it is now nested in $data
+
 ```javascript
-<script webc:type="render" webc:is="template">
-    function () {
-        let collection = this.data[0].all;
-        let navigation = collection.filter(page => page.data.eleventyNavigation)
-        return navigation.map((page) => {
-            return `<li class="header__item">
-            <a href="${page.url}">${page.data.title}</a>
-            </li>`})
-        .join("");
-    }
+<script webc:type="js">
+    let collection = this.$data.data[0].all;
+    let navigation = collection.filter(page => page.data.eleventyNavigation)
+    navigation.map((page) => {
+        return `<li class="header__item">
+        <a href="${page.url}">${page.data.title}</a>
+        </li>`})
+    .join("");
 </script>
 ```
 
