@@ -1,10 +1,8 @@
 <header class="header">
   <div class="header__left">
     <h1 class="home">
-      <script webc:type="render" webc:is="template">
-        function() {
-            return `<a href="/">${this.data.metadata.title}</a>`;
-          }
+      <script webc:type="js">
+        `<a href="/">${this.$data.data.metadata.title}</a>`;
       </script>
     </h1>
     <button class="nav__burger" aria-label="open menu">
@@ -19,16 +17,18 @@
 
   <div class="header__right">
     <ul class="header__list">
-      <script webc:type="render" webc:is="template">
-          function () {
-            let collection = this.data.collections.all;
-            let navigation = collection.filter(page => page.data.eleventyNavigation)
-            return navigation.map((page) => {
-                return `<li class="header__item">
+      <script webc:type="js">
+        // function () {
+        let collection = this.$data.data.collections.all;
+        let navigation = collection.filter((page) => page.data.eleventyNavigation);
+        navigation
+          .map((page) => {
+            return `<li class="header__item">
           <a href="${page.url}">${page.data.title}</a>
-        </li>`})
-        .join("");
-          }
+        </li>`;
+          })
+          .join('');
+        // }
       </script>
       <li class="header__item"><a href="https://shareanddance.com">Music Blog</a></li>
       <li class="header__item">

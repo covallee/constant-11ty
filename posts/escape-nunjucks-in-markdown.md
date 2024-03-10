@@ -13,7 +13,7 @@ Writing my last post I had a problem. How do you include code with Nunjucks temp
 
 Well you wrap your code with
 
-```javascript
+```js
 {{ "{% raw %}" | escape}}
 Code goes here
 {{ "{% endraw %}" | escape}}
@@ -21,12 +21,12 @@ Code goes here
 
 I actually had to use another technique to be able to explain this 🤯. Thanks to [Larry Hudson](https://www.larryhudson.io/blog/2020/02/escaping-nunjucks-in-eleventy/) for this one.
 
-```javascript
+```js
 {% raw %}{{ "{% raw %}" | escape}}{% endraw %}
 ```
 
 From the [docs](https://mozilla.github.io/nunjucks/templating.html#verbatim) the tag verbatim is supposed to do the same but I get an error with "tag verbatim not found" if I wrap any blocks
 
-```javascript
+```js
 {% raw %}{% verbatim %}{% endverbatim %}{% endraw %}
 ```
