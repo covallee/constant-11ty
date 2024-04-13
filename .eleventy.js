@@ -68,6 +68,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon-32x32.png');
   eleventyConfig.addPassthroughCopy('apple-touch-icon.png');
 
+  eleventyConfig.addPassthroughCopy('robots.txt');
+  eleventyConfig.addPassthroughCopy('ai.txt');
+
   eleventyConfig.addPassthroughCopy('css/fonts');
 
   let markdownLibrary = markdownIt({
