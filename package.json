@@ -39,6 +39,6 @@
     "maintained node versions"
   ],
   "dependencies": {
-    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy-fetch": "^4.0.1"
   }
 }
