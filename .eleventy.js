@@ -8,7 +8,6 @@ import markdownItAnchor from 'markdown-it-anchor';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
 import { EleventyRenderPlugin } from '@11ty/eleventy';
-import UpgradeHelper from '@11ty/eleventy-upgrade-help';
 import Image from '@11ty/eleventy-img';
 import getTagList from './_11ty/getTagList.js';
 
