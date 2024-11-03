@@ -1,5 +1,7 @@
-const Cache = require('@11ty/eleventy-fetch');
-require('dotenv').config();
+import Cache from '@11ty/eleventy-fetch';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const filter = {
   filter: {
@@ -16,7 +18,7 @@ const filter = {
   ],
 };
 
-module.exports = async function () {
+export default async function () {
   let url = 'https://api.notion.com/v1/databases/238c4654c5444b6a959e86f7388fb9f6/query';
 
   let json = await Cache(url, {
@@ -33,7 +35,5 @@ module.exports = async function () {
     },
   });
 
-  return {
-    json,
-  };
-};
+  return json;
+}

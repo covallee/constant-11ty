@@ -9,6 +9,9 @@ layout: layouts/post.njk
 socialImage: /img/socials/exploring-webc.jpg
 ---
 
+> ⚠ Warning
+> This was written for Eleventy 1 and 2. With the migration to Eleventy 3.0 some of the information in this post are not right anymore
+
 A few weeks ago, I was at JamstackConf 22 and WebC was mentioned many times during the talks. It got me curious.
 
 With WebC being pretty new the examples are still limited yet, and since I ran into a few issues, hopefully, sharing my process can help some people in the future.

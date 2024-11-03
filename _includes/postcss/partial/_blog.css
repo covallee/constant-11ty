@@ -36,6 +36,14 @@
     }
   }
 
+  & blockquote {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    background-color: var(--bg-blockquote);
+    border-left: 4px solid var(--title-color);
+    border-radius: 4px;
+  }
+
 
   & code {
     color: var(--title-color);
