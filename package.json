@@ -40,6 +40,5 @@
   ],
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.1",
-    "@11ty/eleventy-upgrade-help": "^3.0.1"
   }
 }
