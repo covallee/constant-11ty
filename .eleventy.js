@@ -1,15 +1,16 @@
-const { DateTime } = require('luxon');
-const fs = require('fs');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginNavigation = require('@11ty/eleventy-navigation');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginWebc = require('@11ty/eleventy-plugin-webc');
-const { EleventyRenderPlugin } = require('@11ty/eleventy');
-
-const Image = require('@11ty/eleventy-img');
+import { DateTime } from 'luxon';
+import fs from 'fs';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginNavigation from '@11ty/eleventy-navigation';
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginWebc from '@11ty/eleventy-plugin-webc';
+import { EleventyRenderPlugin } from '@11ty/eleventy';
+import UpgradeHelper from '@11ty/eleventy-upgrade-help';
+import Image from '@11ty/eleventy-img';
+import getTagList from './_11ty/getTagList.js';
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
@@ -27,18 +28,16 @@ async function imageShortcode(src, alt, sizes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginWebc, {
     components: '_includes/components/**/*.webc',
   });
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.setDataDeepMerge(true);
-
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   eleventyConfig.addFilter('readableDate', (dateObj) => {
@@ -56,7 +55,7 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addCollection('tagList', require('./_11ty/getTagList'));
+  eleventyConfig.addCollection('tagList', getTagList);
 
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
   eleventyConfig.addLiquidShortcode('image', imageShortcode);
@@ -67,23 +66,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon-16x16.png');
   eleventyConfig.addPassthroughCopy('favicon-32x32.png');
   eleventyConfig.addPassthroughCopy('apple-touch-icon.png');
-
   eleventyConfig.addPassthroughCopy('robots.txt');
   eleventyConfig.addPassthroughCopy('ai.txt');
-
   eleventyConfig.addPassthroughCopy('css/fonts');
 
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
-    linkinfy: true,
+    linkify: true,
   }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.linkInsideHeader({
-      symbol: `
-        <span aria-hidden="true">#</span>
-      `,
+    permalink: markdownItAnchor.permalink.ariaHidden({
       placement: 'before',
+      class: 'direct-link',
+      symbol: '#',
+      level: [1, 2, 3, 4],
     }),
+    slugify: eleventyConfig.getFilter('slug'),
   });
+
   eleventyConfig.setLibrary('md', markdownLibrary);
-};
+
+  eleventyConfig.addPlugin(UpgradeHelper);
+}

@@ -1,29 +1,31 @@
-const fs = require('fs');
-const path = require('path');
-const postcss = require('postcss');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import postcss from 'postcss';
+import postcssImport from 'postcss-import';
+import postcssMixins from 'postcss-mixins';
+import postcssNested from 'postcss-nested';
+import cssnano from 'cssnano';
 
-// the file name as an entry point for postcss compilation
-// also used to define the output filename in our output /css folder
 const fileName = 'styles.css';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-module.exports = class {
+export default class {
   async data() {
     const rawFilepath = path.join(__dirname, `../_includes/postcss/${fileName}`);
+    const rawCss = await fs.readFile(rawFilepath, 'utf-8');
     return {
       permalink: `css/${fileName}`,
       rawFilepath,
-      rawCss: await fs.readFileSync(rawFilepath),
+      rawCss,
     };
   }
 
   async render({ rawCss, rawFilepath }) {
-    return await postcss([
-      require('postcss-import'),
-      require('postcss-mixins'),
-      require('postcss-nested'),
-      require('cssnano'),
-    ])
-      .process(rawCss, { from: rawFilepath })
-      .then((result) => result.css);
+    const result = await postcss([postcssImport, postcssMixins, postcssNested, cssnano]).process(
+      rawCss,
+      { from: rawFilepath }
+    );
+    return result.css;
   }
-};
+}

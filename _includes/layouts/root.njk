@@ -18,13 +18,14 @@
 
     {% include "_meta.njk" %}
 
-    <style>{{ page.url | webcGetCss | safe }}</style>
+    {# <style>{{ page.url | webcGetCss | safe }}</style> #}
+    <style>{% getBundle "css" %}</style>
     {% set jsInline %}
       {% include "js/inline.js" %}
     {% endset %}
     <script>{{ jsInline | safe }}</script>
 
-    <script src="https://cdn.usefathom.com/script.js" data-site="ZTOWCDCW" defer></script>
+    {# <script src="https://cdn.usefathom.com/script.js" data-site="ZTOWCDCW" defer></script> #}
 
   </head>
   <body>
