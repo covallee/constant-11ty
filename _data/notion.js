@@ -28,12 +28,11 @@ export default async function () {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
-        'Notion-Version': '2021-05-13',
+        'Notion-Version': '2022-06-28',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(filter),
     },
   });
-
   return json;
 }
