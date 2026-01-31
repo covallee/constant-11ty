@@ -28,7 +28,7 @@ export default async function () {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
-        'Notion-Version': '2022-06-28',
+        'Notion-Version': '2022-06-28', // Latest stable version; update when Notion releases newer
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(filter),

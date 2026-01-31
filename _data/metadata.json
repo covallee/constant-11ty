@@ -1,12 +1,12 @@
 {
   "title": "Constant Vallee",
   "url": "https://constantvallee.dev",
-  "description": "Constant Vallee, Front-end Engineer in Montreal.",
+  "description": "Constant Vallee, Engineering Manager in Montreal.",
   "feed": {
-    "subtitle": "",
-    "filename": "",
-    "path": "",
-    "id": ""
+    "subtitle": "Engineering Manager in Montreal",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "id": "https://constantvallee.dev/"
   },
   "author": {
     "name": "Constant Vallee",
